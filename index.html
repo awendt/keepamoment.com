@@ -1,20 +1,15 @@
 ---
-layout: default
+layout: none
 ---
 
-<div class="home">
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% assign page = post %}
 
-  <h1>Posts</h1>
+<!DOCTYPE html>
+<html>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include head.html %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    {% include main.html %}
+</html>

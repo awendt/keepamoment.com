@@ -7,6 +7,18 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/foundation.min.css" | prepend: site.baseurl }}">
+
+    <style type="text/css">
+      .ghost.button { border:3px solid white !important; background: rgba(128, 128, 128, .6);
+ !important; }
+      .button-group li:last-child .ghost.button { border-left: 0 none !important; }
+      body {
+        height: 100%;
+        background:#333 no-repeat center;
+        background-size:contain;
+        padding-top:50px;
+      }
+    </style>
 
 </head>
