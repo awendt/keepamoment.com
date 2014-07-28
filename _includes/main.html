@@ -1,23 +1,16 @@
 <body style="background-image:url('{{page.photo}}')">
 
-<div class="row">
-  <div class="small-9 medium-6 large-4 small-centered columns">
-    <ul class="radius button-group even-2">
-      <li>
-        {% if page.previous %}
-        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="tiny ghost button">&larr; Previous</a>
-      {% else %}
-        <a href="#" class="tiny ghost button">&larr; Previous</a>
-      {% endif %}
-      </li>
-      <li>
-      {% if page.next %}
-      <a href="{{ page.next.url | prepend: site.baseurl }}" class="tiny ghost button">Next &rarr;</a>
-      {% else %}
-      <a href="#" class="tiny ghost button">Next &rarr;</a>
-      {% endif %}
-      </li>
-    </ul>
+<div class="row" data-equalizer>
+  <div class="small-2 large-1 columns">
+    {% if page.previous %}
+    <a class="prev-image" href="{{ page.previous.url | prepend: site.baseurl }}">previous</a>
+    {% endif %}
+  </div>
+  <div class="small-8 large-10 columns"></div>
+  <div class="small-2 large-1 columns">
+    {% if page.next %}
+    <a class="next-image" href="{{ page.next.url | prepend: site.baseurl }}">next</a>
+    {% endif %}
   </div>
 </div>
 
