@@ -1,11 +1,9 @@
 # Site settings
-title: Your awesome title
+title: Keep a moment
 email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "If you see something that moves you, and then snap it, you keep a moment."
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.keepamoment.com"
 
 # Build settings
 markdown: kramdown
