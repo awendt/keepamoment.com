@@ -2,12 +2,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}/">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta property="og:image" content="{{ page.photo }}" />
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    {% endif %}
+    <meta property="og:description" content="{{ site.description }}" />
+    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}/" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/foundation.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/foundation.min.css" | prepend: site.baseurl }}" />
 
     <style type="text/css">
       .ghost.button { border:3px solid white !important; background: rgba(128, 128, 128, .6);
